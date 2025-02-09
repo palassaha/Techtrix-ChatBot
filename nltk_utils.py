@@ -1,15 +1,24 @@
 import nltk
-from nltk.stem.porter import PorterStemmer
+import numpy as np
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+import re
+
 # nltk.download('punkt')
 # nltk.download('punkt_tab')
+# nltk.download("stopwords")
+# nltk.download("wordnet")
 
-stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
+stop_words = set(stopwords.words("english"))
 
 def tokenize(sentence):
-    return nltk.word_tokenize(sentence)
+    sentence = re.sub(r"[^a-zA-Z0-9\s]", "", sentence)
+    return word_tokenize(sentence)
 
-def stem(word):
-    return stemmer.stem(word.lower())
+def lemmatize(word):
+    return lemmatizer.lemmatize(word.lower())
 
 def bag_of_words(tokenized_sentence, all_words):
     pass
