@@ -21,9 +21,9 @@ def lemmatize(word):
     return lemmatizer.lemmatize(word.lower())
 
 def bag_of_words(tokenized_sentence, all_words):
-    pass
-
-# s1 = "Chat Bot With PyTorch - NLP And Deep Learning - Python Tutorial (Part 1)"
-# print(s1)
-# s1 = tokenize(s1)
-# print(s1)
+    tokenized_sentence = [lemmatize(w) for w in tokenized_sentence if w not in stop_words]  # Remove stopwords & lemmatize
+    bag = np.zeros(len(all_words), dtype=np.float32)
+    for idx, w in enumerate(all_words):
+        if w in tokenized_sentence:
+            bag[idx] = 1.0
+    return bag

@@ -1,0 +1,42 @@
+{
+    "events": [
+        {
+            "category": "Coding",
+            "event": "Hackathon",
+            "description": "A 24-hour coding competition where teams compete to build the best software",
+            "rules": [
+                "solution.",
+                "1. Maximum 4 members per team.",
+                "2. No plagiarism.",
+                "3. The decision of judges is final."
+            ],
+            "date_time": "10th March, 9:00 AM",
+            "venue": "Computer Lab",
+            "coordinator": {
+                "name": "Rahul Sharma",
+                "contact": "9876543210"
+            }
+        },
+        {
+            "category": "Gaming",
+            "event": "Valorant Tournament",
+            "description": "A 5v5 competitive gaming event.",
+            "rules": [
+                "1. Teams must register in advance.",
+                "2. Standard Valorant rules apply.",
+                "3. Toxic behavior will result in disqualification.",
+                "FAQs:",
+                "Q: How can I register?",
+                "A: Visit our website or contact the event coordinator.",
+                "Q: Is there an entry fee?",
+                "A: Some events have a small entry fee. Check the event details."
+            ],
+            "date_time": "12th March, 2:00 PM",
+            "venue": "E-Sports Arena",
+            "coordinator": {
+                "name": "Priya Verma",
+                "contact": "9876543222"
+            }
+        }
+    ]
+}
